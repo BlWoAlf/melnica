@@ -1,0 +1,31 @@
+.catalog-menu{
+    display: none;
+
+    .list__item{
+        color: $primary-text-color;
+        margin-bottom: 32px
+    }
+
+    .list__sub-item{
+        margin-top: 16px;
+        a{
+            @extend %clean-link;
+            color: $secondary-text-color;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .menu__sub-list{
+        padding-left: 10px;
+
+        @media(min-width: 992px) {
+            padding-left: 20px;
+        }
+    }
+
+    @media(min-width: 768px) {
+        display: block;
+    }
+}

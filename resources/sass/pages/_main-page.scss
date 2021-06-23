@@ -1,0 +1,26 @@
+.section_main{
+    padding-top: 73px;
+    min-height: 633px;
+    background: url('../../images/main-banner.jpg') no-repeat center;
+    background-size: cover;
+
+    .section__header{
+        max-width: 520px;
+    }
+}
+
+.section_main-content{
+    padding: 48px 0 79px;
+    .image{
+        width: 100%;
+    }
+}
+
+.holodos-image{
+    float: right;
+    width: 100%;
+    max-width: 526px;
+    img{
+        max-width: 100%;
+    }
+}

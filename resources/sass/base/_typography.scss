@@ -1,0 +1,147 @@
+$primary-font: 'Montserrat';
+$secondary-font: 'Open Sans';
+
+$standart-text-size: 16px;
+$standart-style: normal;
+$standart-weight: normal;
+$header-wight: bold;
+
+$standart-text-line-height: 21px;
+
+body{
+    font-family: $primary-font;
+    font-style: $standart-style;
+    font-weight: $standart-weight;
+}
+
+.h1-header{
+    font-size: 36px;
+    line-height: 54px;
+    margin-bottom: 48px;
+    font-weight: $header-wight;
+    text-transform: uppercase;
+}
+
+.section_main{
+    .h1-header{
+        margin-bottom: 82px;
+    }
+}
+
+.header-section{
+    .h1-header{
+        margin-bottom: 10px;
+    }
+}
+
+.h2-header{
+    font-family: $secondary-font;
+    font-weight: $header-wight;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.text{
+    font-size: $standart-text-size;
+    line-height: $standart-text-line-height;
+    margin-bottom: 16px;
+}
+.text_no-margin{
+    margin-bottom: 0px;
+}
+
+.menu{
+    a{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 36px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+.footer__info{
+    text-align: justify;
+    @media (min-width: 576px){
+        text-align: left;
+    }
+}
+
+.footer__text{
+    font-family: $secondary-font;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 0px;
+}
+
+.footer__menu{
+    text-align: center;
+    @media (min-width: 576px){
+        text-align: left;
+    }
+}
+
+.footer__contacts{
+    font-family: $secondary-font;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    @media (min-width: 576px){
+        text-align: right;
+    }
+}
+
+.catalog-menu{
+    .list__item{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 21px;
+        @media(min-width: 1200px){
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+    .list__sub-item{
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+        @media(min-width: 1200px){
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+
+.add-basket{
+    i{
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        margin-right: 10px;
+    }
+
+    .add-basket__text{
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+
+.product__price{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;    
+    text-align: center
+}
+
+.product__name{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    @media (min-width: 768px){
+        font-size: 18px;
+    }
+}

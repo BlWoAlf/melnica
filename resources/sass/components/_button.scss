@@ -1,0 +1,13 @@
+.button{
+    border: none;
+    &:focus{
+        outline: none;
+    }
+}
+.feedback-button{
+    width: 231px;
+    height: 40px;
+    background: $gradient-orange;
+    border-radius: 20px;
+    color: $white-color;
+}

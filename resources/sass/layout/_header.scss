@@ -1,0 +1,10 @@
+.header{
+    background: $header-bg-color;
+    border: 1px solid $black-color;
+    box-sizing: border-box;
+}
+
+.header__container{
+    @extend %flex-center-row;
+    min-height: 84px;
+}

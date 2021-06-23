@@ -1,0 +1,21 @@
+.gallary__item{
+    cursor: pointer;
+    margin-bottom: 15px;
+    .gallary__image{
+        margin-bottom: 10px;
+    }
+}
+.gallary__image{
+    width: 100%;
+    max-width: 190px;
+    max-height: 226px;
+    margin: 0 auto;
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+
+.gallary__descr{
+    color: $blood-red;
+}

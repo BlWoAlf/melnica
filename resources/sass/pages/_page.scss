@@ -1,0 +1,6 @@
+.header-section{
+    @extend %flex-center-row;
+    min-height: 218px;
+    background: url('../../images/header-bg.jpg') no-repeat center;
+    background-size: cover;
+}

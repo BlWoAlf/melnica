@@ -1,0 +1,21 @@
+.section_product{
+    .product{
+        margin-bottom: 32px;
+    }
+    
+    .add-basket{
+        opacity: 1;    
+    }
+    .product__price{
+        top: 38px;
+    }
+    .product__name{
+        margin-bottom: 7px;
+    }
+
+    .product__description{
+        .text{
+            color: $secondary-text-color;
+        }
+    }
+}

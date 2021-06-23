@@ -1,0 +1,19 @@
+.logo{
+    width: 273px;
+    height: 70px;
+    flex-shrink: 0;
+    a{
+        @extend %clean-link;
+    }
+    img{
+        @extend %img-fill;
+    }
+}
+.logo__img{
+    width: 100%;
+    height: 64px;
+}
+
+.footer__logo{
+    margin-bottom: 19px;
+}

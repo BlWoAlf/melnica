@@ -1,0 +1,14 @@
+.footer__contacts{
+    .contacts__item{
+        margin-bottom: 20px;
+    }
+
+    a{
+        @extend %clean-link;
+        color: $white-color;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

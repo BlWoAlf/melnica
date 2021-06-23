@@ -1,0 +1,30 @@
+@import 'utils/variables';
+@import 'utils/placeholders';
+@import 'utils/functions';
+
+@import 'vendors/fonts';
+@import 'vendors/adfm';
+@import 'vendors/fontawesome/fontawesome.scss';
+@import 'vendors/fontawesome/regular.scss';
+@import 'vendors/fontawesome/solid.scss';
+@import 'vendors/fontawesome/brands.scss';
+
+@import 'base/base';
+@import 'base/colors';
+@import 'base/typography';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/list';
+@import 'layout/section';
+
+@import 'components/logo';
+@import 'components/menu';
+@import 'components/contacts';
+@import 'components/catalog-menu';
+@import 'components/product';
+
+@import 'pages/main-page';
+@import 'pages/page';
+@import 'pages/catalog-page';
+@import 'pages/product-page';

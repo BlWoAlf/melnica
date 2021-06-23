@@ -1,0 +1,26 @@
+.menu{
+    a{
+        @extend %clean-link;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.header__menu{
+    margin-left: auto;
+    li{
+        margin: 0 15px;
+    }
+    a{
+        padding: 8px 5px;
+        color: $primary-text-color;
+    }
+}
+
+.footer__menu{
+    a{
+        color: $white-color;
+    }
+}

@@ -1,0 +1,18 @@
+.footer{
+    min-height: 476px;
+    padding: 62px 0px 84px;
+    color: $white-color;
+    box-sizing: border-box;
+    background: #25272A;
+
+    .menu{
+        padding-top: 5px;
+    }
+    .contacts{
+        padding-top: 10px;
+    }
+}
+
+.footer__content{
+    margin-bottom: 32px;
+}

@@ -1,0 +1,39 @@
+.garant{
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 25px;
+}
+.garant__number{
+    position: absolute;
+    color: $light-green;
+    transform: rotate(-90deg);
+    left: -18px;
+    top: 22px;
+    cursor: pointer;
+}
+.garant__item{
+    @extend %flex-center-column;
+    color: $primary-text-color;
+}
+
+.garant__image{
+    width: 126px;
+    height: 120px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    left: 30px;
+    img{
+        width: 100%;
+    }
+    margin-bottom: 18px;
+}
+
+.garant__name{
+    margin-bottom: 16px;
+}
+
+.garant__decr{
+    color: $light-grey;
+}

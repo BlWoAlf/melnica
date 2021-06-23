@@ -1,0 +1,13 @@
+.table{
+    width: 100%;
+    color: $black-color;
+    tr{
+        &:nth-child(2n+1){
+            background: $light-grey-light;
+        }
+        &:first-child{
+            background: $red-red;
+            color: $white-color;
+        }
+    }
+}
