@@ -14,21 +14,42 @@
             <div class="logo header__logo">
                 <a href="/">
                     <div class="logo__img">
-                        <img src="../../images/logo.png">
+                        <img src="{{asset('images/logo.png')}}">
                     </div>
                 </a>
             </div>
             <div class="menu header__menu">
                 <nav class="menu__nav">
+                    @php($links = \App\Models\Adfm\Menu::getData('main'))
                     <ul class="horizontal-list menu__list">
-                        <li class="list__item"><a href="">Главная</a></li>
-                        <li class="list__item"><a href="">Услуги</a></li>
-                        <li class="list__item"><a href="">Торговые автоматы</a></li>
-                        <li class="list__item"><a href="">Продукция</a></li>
-                        <li class="list__item"><a href="">О компании</a></li>
-                        <li class="list__item"><a href="">Контакты</a></li>
+                        @foreach($links[0] as $el)
+                        <li class="list__item"><a href="{{$el->link}}"
+                            @if ($el->link == 'http://melnica/catalog')
+                            class="item__sub-list">{{$el->title}}</a>
+                            <ul class="sub-menu-products">
+                                @php($sublinks = \App\Models\Adfm\Catalog\Category::getData())
+                                @foreach ($sublinks[0] as $el)
+                                <li><a>{{$el->title}}</a>
+                                    @if (isset($sublinks[$el->id]) && $el->id != 0)
+                                    <ul>
+                                        @foreach ($sublinks[$el->id] as $sub_el)
+                                        <li><a href="{{$sub_el->link}}">{{$sub_el->title}}</a></li>
+                                        @endforeach
+                                    </ul>
+                                    @endif
+                                </li>
+                                @endforeach
+                            </ul>
+                            @else
+                            >{{$el->title}}</a>
+                            </li>
+                        @endif
+                        @endforeach
                     </ul>
                 </nav>
+            </div>
+            <div class="header__burger-button burger-button">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
@@ -43,7 +64,7 @@
                         <div class="logo footer__logo">
                             <a href="/">
                                 <div class="logo__img">
-                                    <img src="../../images/logo-white.png">
+                                    <img src="{{asset('images/logo-white.png')}}">
                                 </div>
                             </a>
                         </div>
@@ -60,12 +81,9 @@
                 <div class="col-12 col-md-6 col-lg-3 offset-lg-1">
                     <div class="footer__content menu">
                         <ul class="vertical-list menu__list footer__menu">
-                            <li class="list__item"><a href="">Главная</a></li>
-                            <li class="list__item"><a href="">Услуги</a></li>
-                            <li class="list__item"><a href="">Торговые автоматы</a></li>
-                            <li class="list__item"><a href="">Продукция</a></li>
-                            <li class="list__item"><a href="">О компании</a></li>
-                            <li class="list__item"><a href="">Контакты</a></li>
+                            @foreach($links[0] as $el)
+                            <li class="list__item"><a href="{{$el->link}}">{{$el->title}}</a>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

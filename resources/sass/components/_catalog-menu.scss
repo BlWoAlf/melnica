@@ -2,8 +2,14 @@
     display: none;
 
     .list__item{
-        color: $primary-text-color;
-        margin-bottom: 32px
+        margin-bottom: 32px;
+        a{
+            @extend %clean-link;
+            color: $primary-text-color;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
     }
 
     .list__sub-item{

@@ -16,11 +16,26 @@ class Category extends Model
     protected $fillable = [
         'title',
         'slug',
+        'parent_id',
         'description',
     ];
 
     public function products()
     {
         return $this->belongsToMany(Product::class);
+    }
+
+    public static function getData()
+    {
+        $uri = request()->getPathInfo();
+        $links = Category::get();
+        $tree = [];
+        foreach ($links as $link) {
+            if ($uri == '/'.$link['link']) {
+                $link['status'] = 'active';
+            }
+            $tree[$link['parent_id']][] = $link;
+        }
+        return $tree;
     }
 }

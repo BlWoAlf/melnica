@@ -41,24 +41,24 @@
                     </div>
                     <div class="col-12 col-md-4 col-lg-5 offset-lg-1">
                         <div class="holodos-image">
-                            <img src="../images/vend 1.png">
+                            <img src="{{asset('images/vend 1.png')}}">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 col-sm-4">
                         <div class="image">
-                            <img src="../images/snack.jpg">
+                            <img src="{{asset('images/snack.jpg')}}">
                         </div>
                     </div>
                     <div class="col-12 col-sm-4">
                         <div class="image">
-                            <img src="../images/cofee.jpg">
+                            <img src="{{asset('images/cofee.jpg')}}">
                         </div>
                     </div>
                     <div class="col-12 col-sm-4">
                         <div class="image">
-                            <img src="../images/vending.jpg">
+                            <img src="{{asset('images/vending.jpg')}}">
                         </div>
                     </div>
                 </div>

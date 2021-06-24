@@ -4,10 +4,7 @@
 
 @import 'vendors/fonts';
 @import 'vendors/adfm';
-@import 'vendors/fontawesome/fontawesome.scss';
-@import 'vendors/fontawesome/regular.scss';
-@import 'vendors/fontawesome/solid.scss';
-@import 'vendors/fontawesome/brands.scss';
+@import 'vendors/fontawesome';
 
 @import 'base/base';
 @import 'base/colors';
@@ -23,6 +20,7 @@
 @import 'components/contacts';
 @import 'components/catalog-menu';
 @import 'components/product';
+@import 'components/buttons';
 
 @import 'pages/main-page';
 @import 'pages/page';

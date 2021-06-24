@@ -11,7 +11,13 @@
 .header__menu{
     margin-left: auto;
     li{
-        margin: 0 15px;
+        margin: 0 5px;
+        @media (min-width: 1200px){
+            margin: 0 10px;
+        }
+        @media (min-width: 1400px){
+            margin: 0 15px;
+        }
     }
     a{
         padding: 8px 5px;
@@ -23,4 +29,8 @@
     a{
         color: $white-color;
     }
+}
+
+.sub-menu-products{
+    display: none;
 }

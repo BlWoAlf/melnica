@@ -30,10 +30,6 @@ mix.scripts([
 ], 'public/vendor/wtolk/crud/js/admin.js');
 
 
-//reqire MicroPlugin from '../lib/selectize/microplugin.min';
-//import MicroPlugin from '../lib/selectize/microplugin.min';
-
-
 mix.sass('vendor/wtolk/crud/src/assets/scss/adfm-panel.scss', 'vendor/wtolk/crud/css/');
 mix.copy('public/vendor/wtolk/crud/css/adfm-panel.css', 'vendor/wtolk/crud/src/assets/css/adfm-panel.css');
 

@@ -369,7 +369,7 @@
   padding: 0px;
 }
 
-.add-basket, .pic-link a {
+.burger-button, .add-basket, .pic-link a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -384,7 +384,7 @@
   align-items: center;
 }
 
-.product__name a, .product__link, .catalog-menu .list__sub-item a, .footer__contacts a, .menu a, .logo a, .pic-link a {
+.product__name a, .product__link, .catalog-menu .list__sub-item a, .catalog-menu .list__item a, .footer__contacts a, .menu a, .logo a, .pic-link a {
   text-decoration: none;
 }
 
@@ -804,6 +804,7 @@
   box-sizing: border-box;
   padding: 0 15px;
   margin: 0 auto;
+  width: 100%;
 }
 @media (min-width: 0px) {
   .container {
@@ -1668,6 +1669,58 @@ button.link {
   background: none;
   cursor: pointer;
   text-decoration: underline;
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?89a52ae1d02b86d6143987c865471c24);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.eot?89a52ae1d02b86d6143987c865471c24?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff2?c1210e5ebe4344da508396540be7f52c) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.woff?329a95a9172fdb2cccb4f9347ed55233) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.ttf?9e138496e8f1719c6ebf0abe50563635) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-brands-400.svg?216edb96b562c79adc09e2d3c63db7c0#fontawesome) format("svg");
+}
+.fab {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?4079ae2d2a15d0689568f3a5459241c7);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.eot?4079ae2d2a15d0689568f3a5459241c7?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff2?68c5af1f48e2bfca1e57ae1c556a5c72) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.woff?3672264812746c3c7225909742da535c) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.ttf?1017bce89c72f95bcf8e2bf4774efdbf) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-regular-400.svg?19e27d348fefc21941e0310a0ec6339b#fontawesome) format("svg");
+}
+.far {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+/*!
+ * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?efbd5d20e407bbf85f2b3087ee67bfa1);
+  src: url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.eot?efbd5d20e407bbf85f2b3087ee67bfa1?#iefix) format("embedded-opentype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff2?ada6e6df937f7e5e8b790dfea07109b7) format("woff2"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.woff?c6ec080084769a6d8a34ab35b77999cd) format("woff"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.ttf?07c3313b24f7b1ca85ee99b4fa7db55e) format("truetype"), url(/fonts/vendor/@fortawesome/fontawesome-free/webfa-solid-900.svg?13de59f1a36b6cb4bca0050160ff0e41#fontawesome) format("svg");
+}
+.fa,
+.fas {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 /*!
@@ -7747,58 +7800,6 @@ readers do not read off random characters that represent icons */
   width: auto;
 }
 
-/*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("/public/fonts/fontawesome/fa-regular-400.eot");
-  src: url("/public/fonts/fontawesome/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("/public/fonts/fontawesome/fa-regular-400.woff2") format("woff2"), url("/public/fonts/fontawesome/fa-regular-400.woff") format("woff"), url("/public/fonts/fontawesome/fa-regular-400.ttf") format("truetype"), url("/public/fonts/fontawesome/fa-regular-400.svg#fontawesome") format("svg");
-}
-.far {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-}
-
-/*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
-  font-family: "Font Awesome 5 Free";
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url("/public/fonts/fontawesome/fa-solid-900.eot");
-  src: url("/public/fonts/fontawesome/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("/public/fonts/fontawesome/fa-solid-900.woff2") format("woff2"), url("/public/fonts/fontawesome/fa-solid-900.woff") format("woff"), url("/public/fonts/fontawesome/fa-solid-900.ttf") format("truetype"), url("/public/fonts/fontawesome/fa-solid-900.svg#fontawesome") format("svg");
-}
-.fa,
-.fas {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-/*!
- * Font Awesome Free 5.15.3 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url("/public/fonts/fontawesome/fa-brands-400.eot");
-  src: url("/public/fonts/fontawesome/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("/public/fonts/fontawesome/fa-brands-400.woff2") format("woff2"), url("/public/fonts/fontawesome/fa-brands-400.woff") format("woff"), url("/public/fonts/fontawesome/fa-brands-400.ttf") format("truetype"), url("/public/fonts/fontawesome/fa-brands-400.svg#fontawesome") format("svg");
-}
-.fab {
-  font-family: "Font Awesome 5 Brands";
-  font-weight: 400;
-}
-
 body {
   margin: 0px;
   padding: 0px;
@@ -7847,7 +7848,7 @@ body {
 }
 
 .header-section .h1-header {
-  margin-bottom: 10px;
+  margin: 0px;
 }
 
 .h2-header {
@@ -7858,7 +7859,8 @@ body {
   margin-bottom: 16px;
 }
 
-.text {
+.text, .product__description p {
+  margin-top: 0px;
   font-size: 16px;
   line-height: 21px;
   margin-bottom: 16px;
@@ -7870,10 +7872,20 @@ body {
 
 .menu a {
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .menu a {
+    font-size: 13px;
+  }
+}
+@media (min-width: 1400px) {
+  .menu a {
+    font-size: 14px;
+  }
 }
 
 .footer__info {
@@ -8000,24 +8012,38 @@ body {
   padding: 70px 0 54px;
 }
 
+.header-section {
+  padding: 20px 0px;
+}
+
 .section__header {
   color: #FFFFFF;
 }
 
 .logo {
-  width: 273px;
-  height: 70px;
+  width: 200px;
+  height: 52px;
   flex-shrink: 0;
 }
 .logo__img {
   width: 100%;
-  height: 64px;
+  height: 49px;
 }
 
 .footer__logo {
   margin-bottom: 19px;
 }
 
+@media (min-width: 1200px) {
+  .logo {
+    width: 273px;
+    height: 70px;
+  }
+
+  .logo__img {
+    height: 64px;
+  }
+}
 .menu a:hover {
   text-decoration: underline;
 }
@@ -8026,7 +8052,17 @@ body {
   margin-left: auto;
 }
 .header__menu li {
-  margin: 0 15px;
+  margin: 0 5px;
+}
+@media (min-width: 1200px) {
+  .header__menu li {
+    margin: 0 10px;
+  }
+}
+@media (min-width: 1400px) {
+  .header__menu li {
+    margin: 0 15px;
+  }
 }
 .header__menu a {
   padding: 8px 5px;
@@ -8035,6 +8071,10 @@ body {
 
 .footer__menu a {
   color: #FFFFFF;
+}
+
+.sub-menu-products {
+  display: none;
 }
 
 .footer__contacts .contacts__item {
@@ -8051,8 +8091,13 @@ body {
   display: none;
 }
 .catalog-menu .list__item {
-  color: #333333;
   margin-bottom: 32px;
+}
+.catalog-menu .list__item a {
+  color: #333333;
+}
+.catalog-menu .list__item a:hover {
+  text-decoration: underline;
 }
 .catalog-menu .list__sub-item {
   margin-top: 16px;
@@ -8092,6 +8137,7 @@ body {
 .product__content {
   width: 100%;
   height: auto;
+  min-height: 145px;
   position: relative;
   border: 1px solid #777777;
   margin-bottom: 16px;
@@ -8150,6 +8196,22 @@ body {
   color: #777777;
 }
 
+.header__burger-button {
+  margin-left: auto;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+.header__burger-button i {
+  font-size: 34px;
+  color: #333333;
+}
+@media (min-width: 992px) {
+  .header__burger-button {
+    display: none;
+  }
+}
+
 .section_main {
   padding-top: 73px;
   min-height: 633px;
@@ -8198,7 +8260,7 @@ body {
 .section_product .product__name {
   margin-bottom: 7px;
 }
-.section_product .product__description .text {
+.section_product .product__description .text, .section_product .product__description p {
   color: #777777;
 }
 /*!

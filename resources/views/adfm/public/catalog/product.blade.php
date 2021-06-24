@@ -1,28 +1,32 @@
-@extends('adfm::public.layout')
+@extends('adfm::public.catalog.catalog-layout')
 @section('meta-title', $product->title)
 
-@section('content')
-<section class="section section_page section_no-bottom-space">
-    <div class="container">
-        <div class="section__header">
-            <h1 class="h1-header h1-header-page">{{$product->title}}</h1>
-        </div>
-        <div class="section__content">
-            <div class="row">
-                <div class="col-12 col-md-7 col-xl-6">
-                    <div class="prod-p__image">
-                        @if (count($product->files) > 0)
-                            {!! ImageCache::get($product->files[0], ['w' => 630, 'h' => 414, 'fit' => 'crop']); !!}
-                        @endif
-                    </div>
+@section('catalog-content')
+<div class="row section_product">
+    <div class="col-12 col-sm-4">
+        <div class="product">
+            <div class="product__content">
+                <div class="product__image">
+                    @if (count($product->files) > 0)
+                        {!! ImageCache::get($product->files[0], ['w' => 300, 'h' => 300, 'fit' => 'crop']); !!}
+                    @endif
                 </div>
-                <div class="col-12 col-md-5">
-                    <div class="prod-p__descr">
-                        {!! $product->content !!}
+                <div class="product__data">
+                    <div class="product__price">
+                        {{$product->price}} руб.
                     </div>
                 </div>
             </div>
+            <div class="product__name">{{$product->title}}</div>
+            <div class="add-basket add-basket_product">
+                <i class="fas fa-shopping-cart"></i> <span class="add-basket__text">В корзину</span>
+            </div>
         </div>
     </div>
-</section>
+    <div class="col-12 col-sm-8">
+        <div class="product__description">
+            {!! $product->content !!}
+        </div>
+    </div>
+</div>
 @endsection
