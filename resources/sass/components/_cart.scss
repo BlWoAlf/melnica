@@ -1,0 +1,283 @@
+.cart{
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    right: -100%;
+    background: $white-color;
+    
+
+    &.show{
+        right: 0;
+        transition: right 0.5s ease-out 0s;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+
+        .cart-mini{
+            display: none;
+        }
+    }
+
+    &.none{
+        display: none;
+    }
+
+    @media (min-width: 576px){
+        top: 10%;
+        right: -450px;
+        width: 450px;
+        height: auto;
+        min-height: 200px;
+        max-height: calc(100vh - 10% - 50px);
+    }
+}
+
+.cart-mini{
+    @extend %flex-center;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    left: 3px;
+    top: 15%;
+    cursor: pointer;
+    background: $white-color;
+    border-radius: 5px 0 0 5px;
+    border: solid 2px $red-orange;
+    border-right: none;
+
+    i{
+        color: $red-orange;
+        font-size: 2em;
+    }
+
+    &.show-mini{
+        left: -75px;
+        transition: left 0.2s ease-out 0s;
+    }
+
+    @media (min-width: 576px) {
+        top: 0px;
+    }
+}
+
+.cart__count{
+    @extend %flex-center;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 12px;
+    background-color: $red;
+    color: $white-color;
+}
+
+.cart__container{
+    @extend %flex-column;
+    width: 100%;
+    padding: 20px;
+}
+
+.cart__header{
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+}
+
+.cart__button-close{
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    top: -10px;
+    cursor: pointer;
+    color: $black-color;
+}
+
+.cart__body{
+    margin-bottom: 20px;
+    overflow-x: hidden; //fsaf
+    overflow-y: auto;
+}
+
+.cart__item{
+    @extend %flex-horizontal;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 15px 0px;
+    border-bottom: 1px solid $border-color;
+    &:last-child{
+        border-color: transparent;
+    }
+
+    .item__image, .item__info, .item__controls{
+        padding: 0px 15px;
+    }
+
+    .item__image{
+        width: 100%;
+        height: 84px;
+        flex-shrink: 0;
+        padding-left: 0px;
+        img{
+            width: 84px;
+        }
+
+        @media(min-width: 576px){
+            width: 84px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .item__info{
+        width: 160px;
+
+        @media(min-width: 576px){
+            width: 165px;
+        }
+        
+        .item__name{
+            color: $primary-text-color;
+            font-size: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .item__price{
+            color: $secondary-text-color;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .item__price_total{
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+
+    .item__controls{
+        width: 110px;
+        margin-left: auto;
+
+        @media(min-width: 576px){
+            width: 130px;
+        }
+
+        .item__remove{
+            padding: 5px;
+            margin-bottom: 20px;
+            text-align: right;
+            cursor: pointer;
+            color: $primary-text-color;
+            font-size: 1rem;
+        }
+
+        .item__counter{
+            float: right;
+        }
+
+        .counter__name{
+            color: $primary-text-color;
+            text-align: right;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .counter__group{
+            @extend %flex-center-row;
+            justify-content: flex-end;
+            height: 30px;
+
+            .counter__input{
+                width: 36px;
+                height: 100%;
+                max-width: 56px;
+                text-align: center;
+                border: 1px solid $light-grey;
+                background: $white-color;
+                color: $primary-text-color;
+                font-size: 18px;
+                position: relative;
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            .counter__button{
+                @extend %flex-center;
+                width: 25px;
+                height: 100%;
+                cursor: pointer;
+                background: $light-white-grey;
+                text-align: center;
+                white-space: nowrap;
+                border: 1px solid $light-grey;
+                border-radius: 5px;
+                color: $primary-text-color;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            .counter__button_prepend{
+                margin-right: -3px;
+            }
+
+            .counter__button_append{
+                margin-left: -3px;
+            }
+        }
+    }
+}
+
+.cart__footer{
+    @extend %flex-center-row;
+    width: 100%;
+    .cart__button{
+        @extend %clean-link;
+        @extend %flex-center-row;
+        min-width: 100px;
+        margin: 0 auto;
+        font-weight: bold;
+        text-transform: uppercase;
+        max-width: 100%;
+        min-height: 32px;
+        height: auto;
+        padding: 9px 18px;
+
+        .cart__cost{
+            @extend %flex-center;
+            padding: 5px;
+            background: $dark-blue;
+            border-radius: 5px;
+            margin-left: 5px;
+            font-size: 12px;
+        }
+
+        @media(min-width: 576px){
+            padding: 9px 35px;
+        }
+    }
+}
+
+.cart__empty{
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: $primary-text-color;
+    padding: 20px 0px 0px;
+}

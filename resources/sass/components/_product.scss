@@ -15,7 +15,7 @@
 .product__content{
     width: 100%;
     height: auto;
-    min-height: 145px;
+    min-height: 130px;
     position: relative;
     border: 1px solid $product-border;
     margin-bottom: 16px;
@@ -63,7 +63,11 @@
     height: 24px;
     background: $red-orange;
     color: $white-color;
-    bottom: 32px;
+    bottom: 1px;
+
+    @media(min-width: 768px){
+        bottom: 32px;
+    }
 }
 
 .product__name{

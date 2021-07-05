@@ -3,6 +3,7 @@
 namespace App\Models\Adfm;
 
 use App\Helpers\Dev;
+use Barryvdh\Debugbar\Facade;
 use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\UploadedFile;
@@ -127,6 +128,7 @@ class File extends Model
 
     public function getUrl()
     {
+        Facade::addMessage($this);
         return Storage::disk($this->disk)->url($this->getDirectory().$this->filename);
     }
 

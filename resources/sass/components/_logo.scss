@@ -1,29 +1,17 @@
 .logo{
     width: 200px;
-    height: 52px;
     flex-shrink: 0;
     a{
         @extend %clean-link;
     }
     img{
-        @extend %img-fill;
+        width: 100%;
     }
 }
 .logo__img{
     width: 100%;
-    height: 49px;
 }
 
 .footer__logo{
     margin-bottom: 19px;
-}
-
-@media (min-width: 1200px) {
-    .logo{
-        width: 273px;
-        height: 70px;
-    }
-    .logo__img{
-        height: 64px;
-    }
 }

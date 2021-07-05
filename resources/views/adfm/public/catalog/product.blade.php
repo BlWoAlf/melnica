@@ -18,9 +18,7 @@
                 </div>
             </div>
             <div class="product__name">{{$product->title}}</div>
-            <div class="add-basket add-basket_product">
-                <i class="fas fa-shopping-cart"></i> <span class="add-basket__text">В корзину</span>
-            </div>
+            <livewire:add-to-cart-button :productid="$product->id">
         </div>
     </div>
     <div class="col-12 col-sm-8">

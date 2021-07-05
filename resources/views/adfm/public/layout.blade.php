@@ -7,8 +7,10 @@
     <title>@section('meta-title')@show</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    @livewireStyles
 </head>
 <body>
+    <livewire:cart>
     <header class="header">
         <div class="container header__container">
             <div class="logo header__logo">
@@ -64,7 +66,7 @@
                         <div class="logo footer__logo">
                             <a href="/">
                                 <div class="logo__img">
-                                    <img src="{{asset('images/logo-white.png')}}">
+                                    <img src="{{asset('images/logo.png')}}">
                                 </div>
                             </a>
                         </div>
@@ -99,6 +101,7 @@
             </div>
         </div>
     </footer>
+@livewireScripts
 <script src="{{asset('js/app.js')}}"></script>
 </body>
 </html>

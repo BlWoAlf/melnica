@@ -1,5 +1,5 @@
 @extends('adfm::public.catalog.catalog-layout')
-{{-- @section('meta-title', $catalog->title) --}}
+@section('meta-title', 'какой-то загловок')
 
 @section('catalog-content')
 <div class="row section_catalog">
@@ -13,9 +13,7 @@
                     @endif
                 </div>
                 <div class="product__data">
-                    <div class="add-basket">
-                        <i class="fas fa-shopping-cart"></i> <span class="add-basket__text">В корзину</span>
-                    </div>
+                    <livewire:add-to-cart-button :productid="$product->id">
                     <a class="product__link" href="{{route('adfm.show.product', $product)}}">
                         <div class="product__price">
                             {{$product->price}} руб.

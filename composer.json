@@ -13,10 +13,12 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
+        "livewire/livewire": "^2.5",
         "wtolk/adfm": "dev-master",
         "wtolk/adfm-catalog": "dev-master"
     },
     "require-dev": {
+        "beyondcode/laravel-dump-server": "^1.7",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

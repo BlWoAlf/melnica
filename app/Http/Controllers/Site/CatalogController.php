@@ -25,4 +25,9 @@ class CatalogController extends Controller
         $catalog = $category->products()->get();
         return view('adfm::public.catalog.catalog', compact('catalog'));
     }
+
+    public function showOrdering()
+    {
+        return view('adfm::public.catalog.order');
+    }
 }

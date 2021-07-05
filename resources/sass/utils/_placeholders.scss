@@ -10,9 +10,13 @@
     align-items: center;
 }
 
-%flex-center-column{
+%flex-column{
     display: flex;
     flex-direction: column;
+}
+
+%flex-center-column{
+    @extend %flex-column;
     align-items: center;
 }
 

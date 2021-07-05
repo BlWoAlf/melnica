@@ -97,8 +97,8 @@ class CategoryScreen
             Column::make([
                 Input::make('category.title')->title('Название категории'),
                 Input::make('category.slug')->title('Вид в адресной строке'),
-                Relation::make('category.parent_category')->title('Родительская категория')
-                    ->options( Category::all()->pluck('title', 'id')->toArray())->defaultValue(0),
+                Relation::make('category.parent_id')->title('Родительская категория')
+                    ->options(Category::all()->pluck('title', 'id')->toArray())->empty('Нет', '0'),
                 Summernote::make('category.description')->title('Описание категории'),
             ])
         ];

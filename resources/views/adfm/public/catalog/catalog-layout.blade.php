@@ -16,11 +16,11 @@
                     @php($categories = \App\Models\Adfm\Catalog\Category::getData())
                     <ul class="vertical-list menu__list">
                         @foreach ($categories[0] as $el)
-                            <li class="list__item"><a href="{{$el->slug}}">{{$el->title}}</a>
+                            <li class="list__item"><a href="{{$el->link}}">{{$el->title}}</a>
                                 @if (isset($categories[$el->id]) && $el->id != 0)
                                 <ul class="vertical-list menu__sub-list">
                                     @foreach ($categories[$el->id] as $sub_el)
-                                    <li class="list__sub-item"><a href="{{$sub_el->slug}}">{{$sub_el->title}}</a></li>
+                                    <li class="list__sub-item"><a href="{{$sub_el->link}}">{{$sub_el->title}}</a></li>
                                     @endforeach
                                 </ul>
                                 @endif

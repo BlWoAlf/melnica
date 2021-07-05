@@ -23,7 +23,8 @@ class PageController extends Controller
 
     public function showMainPage()
     {
-        return view('adfm::public.index');
+        // return view('adfm::public.index');
+        return redirect()->route('adfm.show.catalog');
     }
 
     public function showPage($slug)

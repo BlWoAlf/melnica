@@ -12,6 +12,6 @@ const mix = require('laravel-mix');
  */
 
  mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/main.scss', 'public/css/app.css')
-    .js('public/vendor/mmenu-light/dist/mmenu-light.js', 'public/js/app.js')
-    .postCss('public/vendor/mmenu-light/dist/mmenu-light.css', 'public/css/app.css');
+   .sass('resources/sass/main.scss', 'public/css/app.css')
+   .js('public/vendor/mmenu-light/dist/mmenu-light.js', 'public/js/app.js')
+   .postCss('public/vendor/mmenu-light/dist/mmenu-light.css', 'public/css/app.css');
